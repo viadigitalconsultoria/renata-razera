@@ -4,9 +4,12 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { label: "Sobre", href: "#sobre" },
-    { label: "Psicologia × Psicanálise", href: "#diferenca" },
+    { label: "Pra quem é", href: "#pra-quem" },
     { label: "Como funciona", href: "#como-funciona" },
+    { label: "Benefícios", href: "#beneficios" },
+    { label: "Psicologia × Psicanálise", href: "#diferenca" },
+    { label: "Sobre mim", href: "#sobre" },
+    { label: "FAQ", href: "#faq" },
     { label: "Contato", href: "#contato" },
   ];
 
