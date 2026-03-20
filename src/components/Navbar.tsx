@@ -4,16 +4,19 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { label: "Sobre", href: "#sobre" },
-    { label: "Psicologia × Psicanálise", href: "#diferenca" },
+    { label: "Pra quem é", href: "#pra-quem" },
     { label: "Como funciona", href: "#como-funciona" },
+    { label: "Benefícios", href: "#beneficios" },
+    { label: "Psicologia × Psicanálise", href: "#diferenca" },
+    { label: "Sobre mim", href: "#sobre" },
+    { label: "FAQ", href: "#faq" },
     { label: "Contato", href: "#contato" },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
-        <a href="#" className="text-lg font-serif text-foreground">
+        <a href="#" className="text-2xl font-handwriting text-primary">
           Renata Razera
         </a>
 
