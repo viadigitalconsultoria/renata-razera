@@ -16,7 +16,7 @@ export default {
       fontFamily: {
         serif: ['Cormorant Garamond', 'Georgia', 'serif'],
         sans: ['Mulish', 'system-ui', 'sans-serif'],
-        handwriting: ['Caveat', 'cursive'],
+        handwriting: ['Dancing Script', 'cursive'],
       },
       colors: {
         border: "hsl(var(--border))",
