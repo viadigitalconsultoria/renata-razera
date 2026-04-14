@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Renata Razera — Psicanalista</title>
+<meta name="description" content="Atendimento psicanalítico on-line para adolescentes, adultos e idosos. Sessões semanais de 50 minutos. Renata Razera, psicanalista pelo CEP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="canonical" href="https://renatarareza.com.br/">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Renata Razera">
+<meta name="keywords" content="psicanalista, psicanálise on-line, terapia on-line São Paulo, psicanalista on-line, ansiedade, depressão, autoconhecimento">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://renatarareza.com.br/">
+<meta property="og:title" content="Renata Razera — Psicanalista">
+<meta property="og:description" content="Atendimento psicanalítico on-line para adolescentes, adultos e idosos. Primeira sessão gratuita. Renata Razera, psicanalista pelo CEP.">
+<meta property="og:image" content="https://renatarareza.com.br/og-image.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Renata Razera Psicanalista">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Renata Razera — Psicanalista">
+<meta name="twitter:description" content="Atendimento psicanalítico on-line. Primeira sessão gratuita.">
+<meta name="twitter:image" content="https://renatarareza.com.br/og-image.jpg">
+
+<!-- Favicon inline SVG -->
+<link rel="icon" type="image/png" href="favico.png">
+
+<!-- JSON-LD Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Renata Razera",
+  "jobTitle": "Psicanalista",
+  "description": "Psicanalista clínica formada pelo CEP. Atendimento on-line para adolescentes, adultos e idosos.",
+  "url": "https://renatarareza.com.br",
+  "sameAs": ["https://www.linkedin.com/in/renata-razera-3b805a20/"],
+  "knowsAbout": ["Psicanálise", "Saúde Mental", "Ansiedade", "Depressão", "Autoconhecimento"],
+  "offers": {
+    "@type": "Offer",
+    "name": "Sessão de Psicanálise on-line",
+    "description": "Sessões semanais de 50 minutos, on-line, para adolescentes, adultos e idosos.",
+    "availability": "https://schema.org/InStock"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Brasil"
+  },
+  "alumniOf": [
+    {"@type": "EducationalOrganization", "name": "CEP — Centro de Estudos Psicanalíticos"},
+    {"@type": "EducationalOrganization", "name": "PUC-SP"},
+    {"@type": "EducationalOrganization", "name": "Universidade Mackenzie"}
+  ]
+}
+</script>
+
+<!-- Google Fonts: display=swap reduces render blocking -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+<style>
+  :root {
+    --creme:    #F5F0E8;
+    --creme-md: #EDE5D8;
+    --creme-dk: #D9CEBC;
+    --vinho:    #7B1D34;
+    --vinho-dk: #4A0F1E;
+    --vinho-lt: #A83050;
+    --rose:     #D4998A;
+    --rose-lt:  #EDD5CC;
+    --txt:      #2C1A1A;
+    --txt-md:   #5C3D3D;
+    --txt-lt:   #8A6A6A;
+    --white:    #FDFAF6;
+
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans:  'Jost', sans-serif;
+    --r: 12px;
+    --rLg: 24px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--creme);
+    color: var(--txt);
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  /* ── SCROLLBAR ── */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--creme); }
+  ::-webkit-scrollbar-thumb { background: var(--rose); border-radius: 2px; }
+
+  /* ── NAV ── */
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 60px;
+    background: rgba(245, 240, 232, 0.5); /* Fundo creme com 20% de opacidade */
+    transition: background 0.4s, padding 0.4s, box-shadow 0.4s;
+  }
+  nav.scrolled {
+    background: rgba(245, 240, 232, 0.85); /* Reduzido para 85% para dar uma leve transparência */
+    padding: 14px 60px;
+    box-shadow: 0 1px 0 var(--creme-dk);
+    backdrop-filter: blur(12px);
+  }
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--vinho);
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+  .nav-links {
+    display: flex; gap: 36px; list-style: none;
+  }
+  .nav-links a {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--txt-md);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--vinho); }
+
+  .nav-cta {
+    background: var(--vinho);
+    color: var(--white) !important;
+    padding: 10px 22px;
+    border-radius: 40px;
+    font-weight: 500 !important;
+    letter-spacing: 0.08em !important;
+    transition: background 0.2s, transform 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--vinho-dk) !important; transform: translateY(-1px); }
+
+  /* hamburger */
+  .hamburger {
+    display: none; cursor: pointer; flex-direction: column;
+    gap: 5px; background: none; border: none; padding: 4px;
+  }
+  .hamburger span {
+    width: 22px; height: 1.5px; background: var(--vinho);
+    display: block; transition: all 0.3s;
+  }
+  .mobile-menu {
+    display: none; position: fixed; inset: 0; z-index: 99;
+    background: var(--creme);
+    flex-direction: column; align-items: center; justify-content: center;
+    gap: 32px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--txt);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .mobile-menu a:hover { color: var(--vinho); }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .hero-bg img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+  .hero-bg .hero-bg-mobile {
+    display: none;
+  }
+  .hero-bg-overlay {
+    position: absolute; inset: 70;
+    background: linear-gradient(to right, rgba(245,240,232,0.15) 0%, rgba(245,240,232,0.75) 45%, rgba(245,240,232,0.95) 65%, var(--creme) 85%);
+  }
+
+  .hero-text-col {
+    display: flex; flex-direction: column;
+    justify-content: center;
+    padding: 170px 40px 40px 60px;
+    position: relative;
+    z-index: 1;
+    max-width: 680px; /* Aumentamos de 580px para 720px */
+    margin-right: 5%; /* Reduzimos de 5% para colar um pouquinho mais na direita */
+  }
+  .hero-eyebrow {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--vinho-lt);
+    margin-bottom: 24px;
+  }
+  .hero-headline {
+    font-family: var(--serif);
+    font-size: clamp(2.8rem, 4vw, 4.2rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--txt);
+    margin-bottom: 28px;
+  }
+  .hero-headline em {
+    font-style: italic;
+    color: var(--vinho);
+  }
+  .hero-sub {
+    font-family: var(--sans);
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--txt-md);
+    max-width: 420px;
+    line-height: 1.8;
+    margin-bottom: 48px;
+  }
+  .hero-btns {
+    display: flex; gap: 16px; flex-wrap: wrap;
+  }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--vinho);
+    color: var(--white);
+    padding: 15px 32px;
+    border-radius: 50px;
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    transition: background 0.25s, transform 0.25s;
+  }
+  .btn-primary:hover { background: var(--vinho-dk); transform: translateY(-2px); }
+
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: transparent;
+    color: var(--vinho);
+    padding: 14px 30px;
+    border-radius: 50px;
+    border: 1.5px solid var(--vinho);
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    transition: background 0.25s, color 0.25s, transform 0.25s;
+  }
+  .btn-secondary:hover {
+    background: var(--vinho);
+    color: var(--white);
+    transform: translateY(-2px);
+  }
+
+  .hero-badge {
+    margin-top: 36px;
+    display: inline-flex; align-items: center; gap: 12px;
+    background: var(--white);
+    border: 1px solid var(--creme-dk);
+    border-radius: 50px;
+    padding: 10px 20px;
+    width: fit-content;
+  }
+  .hero-badge-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--rose); flex-shrink: 0;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(212,153,138,0.5); }
+    50% { box-shadow: 0 0 0 6px rgba(212,153,138,0); }
+  }
+  .hero-badge span {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: var(--txt-md);
+    font-weight: 400;
+  }
+
+  /* ── SECTION BASE ── */
+  section { position: relative; }
+
+  .section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 60px;
+  }
+
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--vinho-lt);
+    margin-bottom: 16px;
+    font-weight: 500;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--txt);
+    margin-bottom: 20px;
+  }
+  .section-title em { font-style: italic; color: var(--vinho); }
+  .section-lead {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: var(--txt-md);
+    max-width: 560px;
+    line-height: 1.85;
+    margin-bottom: 60px;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--creme-dk), transparent);
+    margin: 0 60px;
+  }
+
+  /* ── PARA QUEM ── */
+  #para-quem { background: var(--white); }
+
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 16px;
+  }
+  .card {
+    background: var(--creme);
+    border: 1px solid var(--creme-dk);
+    border-radius: var(--rLg);
+    padding: 36px 30px;
+    transition: transform 0.25s, box-shadow 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--vinho), var(--rose));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.35s;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(123,29,52,0.08); }
+  .card:hover::before { transform: scaleX(1); }
+
+  .card-icon {
+    width: 48px; height: 48px;
+    background: var(--rose-lt);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+  .card-icon img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+  }
+  .card h3 {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--txt);
+    margin-bottom: 10px;
+  }
+  .card p {
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--txt-md);
+    line-height: 1.8;
+  }
+
+  /* ── COMO FUNCIONA ── */
+  #como-funciona { background: var(--creme); }
+
+  .steps-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .steps-list { display: flex; flex-direction: column; gap: 0; }
+  .step {
+    display: flex; gap: 28px;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--creme-dk);
+    cursor: pointer;
+    transition: padding-left 0.3s;
+  }
+  .step:last-child { border-bottom: none; }
+  .step:hover { padding-left: 8px; }
+  .step-num {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--creme-dk);
+    line-height: 1;
+    min-width: 36px;
+    padding-top: 4px;
+    transition: color 0.3s;
+  }
+  .step:hover .step-num { color: var(--vinho); }
+  .step-content h3 {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--txt);
+    margin-bottom: 8px;
+  }
+  .step-content p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--txt-md);
+    line-height: 1.8;
+  }
+
+  .steps-visual {
+    background: var(--white);
+    border-radius: var(--rLg);
+    padding: 48px 40px;
+    border: 1px solid var(--creme-dk);
+    text-align: center;
+  }
+  .steps-visual-quote {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--txt);
+    line-height: 1.5;
+    margin-bottom: 24px;
+  }
+  .steps-visual-quote span { color: var(--vinho); }
+  .steps-visual-caption {
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--txt-lt);
+  }
+  .steps-visual-line {
+    width: 40px; height: 1px;
+    background: var(--rose);
+    margin: 20px auto;
+  }
+
+  /* ── BENEFÍCIOS ── */
+  #beneficios { background: var(--vinho-dk); }
+  #beneficios .section-label { color: var(--rose); }
+  #beneficios .section-title { color: var(--white); }
+  #beneficios .section-title em { color: var(--rose); }
+  #beneficios .section-lead { color: rgba(255,255,255,0.65); }
+
+  .beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: rgba(255,255,255,0.08);
+    border-radius: var(--rLg);
+    overflow: hidden;
+  }
+  .beneficio-item {
+    background: rgba(255,255,255,0.04);
+    padding: 40px 32px;
+    transition: background 0.25s;
+  }
+  .beneficio-item:hover { background: rgba(255,255,255,0.1); }
+  .beneficio-num {
+    font-family: var(--serif);
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: rgba(212,153,138,0.3);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+  .beneficio-item h3 {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .beneficio-item p {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.8;
+  }
+
+  /* ── PSICANÁLISE x TCC ── */
+  #comparativo { background: var(--white); }
+
+  .comparativo-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .comparativo-col h3 {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--txt);
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--creme-dk);
+  }
+  .comparativo-col h3 span {
+    color: var(--vinho);
+  }
+  .comp-item {
+    display: flex; gap: 16px;
+    margin-bottom: 24px;
+    align-items: flex-start;
+  }
+  .comp-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--rose);
+    margin-top: 10px;
+    flex-shrink: 0;
+  }
+  .comp-dot.vinho { background: var(--vinho); }
+  .comp-item p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--txt-md);
+    line-height: 1.8;
+  }
+  .comp-item strong {
+    font-weight: 500;
+    color: var(--txt);
+  }
+
+  .comparativo-callout {
+    grid-column: 1 / -1;
+    background: var(--rose-lt);
+    border-left: 3px solid var(--vinho);
+    border-radius: 0 var(--r) var(--r) 0;
+    padding: 28px 32px;
+    margin-top: 8px;
+  }
+  .comparativo-callout p {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--txt);
+    line-height: 1.7;
+  }
+
+  /* ── SOBRE ── */
+  #sobre { background: var(--creme); }
+  .sobre-layout {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .sobre-img {
+    position: sticky; top: 100px;
+  }
+  .sobre-img img {
+    width: 100%;
+    border-radius: var(--rLg);
+    display: block;
+    filter: saturate(0.9);
+  }
+  .sobre-img-caption {
+    margin-top: 20px;
+    padding: 20px 24px;
+    background: var(--white);
+    border-radius: var(--r);
+    border: 1px solid var(--creme-dk);
+  }
+  .sobre-img-caption p {
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: var(--txt-lt);
+    line-height: 1.7;
+  }
+  .sobre-img-caption strong {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--txt);
+    margin-bottom: 4px;
+  }
+
+  .sobre-text .section-label { margin-bottom: 12px; }
+  .sobre-text .section-title { margin-bottom: 24px; }
+  .sobre-bio {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--txt-md);
+    line-height: 1.9;
+    margin-bottom: 20px;
+  }
+
+  .sobre-credentials {
+    margin-top: 40px;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .cred-item {
+    display: flex; gap: 16px; align-items: flex-start;
+    padding: 16px 20px;
+    background: var(--white);
+    border-radius: var(--r);
+    border: 1px solid var(--creme-dk);
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: var(--txt-md);
+    line-height: 1.6;
+  }
+  .cred-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ── FAQ ── */
+  #faq { background: var(--white); }
+  .faq-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    align-items: start;
+  }
+  .faq-side {
+    position: sticky; top: 100px;
+  }
+  .faq-list {
+    display: flex; flex-direction: column;
+    gap: 0;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--creme-dk);
+    overflow: hidden;
+  }
+  .faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 22px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    text-align: left;
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--txt);
+    transition: color 0.2s;
+  }
+  .faq-q:hover { color: var(--vinho); }
+  .faq-q.active { color: var(--vinho); }
+  .faq-icon {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    border: 1px solid var(--creme-dk);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s, border-color 0.2s, transform 0.3s;
+    font-size: 0.9rem;
+    color: var(--txt-lt);
+  }
+  .faq-q.active .faq-icon {
+    background: var(--vinho);
+    border-color: var(--vinho);
+    color: white;
+    transform: rotate(45deg);
+  }
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  .faq-a-inner {
+    padding-bottom: 22px;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--txt-md);
+    line-height: 1.85;
+  }
+
+  /* ── CONTATO ── */
+  #contato { background: var(--creme); }
+  .contato-wrapper {
+    background: var(--vinho);
+    border-radius: 28px;
+    padding: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .contato-wrapper::before {
+    content: '';
+    position: absolute; top: -80px; right: -80px;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+  .contato-wrapper::after {
+    content: '';
+    position: absolute; bottom: -120px; left: -60px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.03);
+  }
+  .contato-text .section-label { color: var(--rose); }
+  .contato-text .section-title { color: var(--white); margin-bottom: 16px; }
+  .contato-text .section-title em { color: var(--rose); }
+  .contato-sub {
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.8;
+    margin-bottom: 8px;
+  }
+  .contato-first-free {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 40px;
+    padding: 6px 18px;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+    margin-top: 12px;
+  }
+
+  .contato-channels {
+    display: flex; flex-direction: column; gap: 16px;
+    position: relative; z-index: 1;
+  }
+  .channel-btn {
+    display: flex; align-items: center; gap: 20px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: var(--rLg);
+    padding: 22px 28px;
+    text-decoration: none;
+    transition: background 0.25s, transform 0.25s;
+    cursor: pointer;
+  }
+  .channel-btn:hover {
+    background: rgba(255,255,255,0.18);
+    transform: translateX(6px);
+  }
+  .channel-icon {
+    width: 44px; height: 44px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .channel-icon svg { width: 20px; height: 20px; fill: white; }
+  .channel-info { flex: 1; }
+  .channel-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 3px;
+  }
+  .channel-value {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: white;
+  }
+  .channel-arrow {
+    color: rgba(255,255,255,0.4);
+    font-size: 1.2rem;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--vinho-dk);
+    padding: 48px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .footer-logo {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba(255,255,255,0.7);
+  }
+  .footer-copy {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.3);
+    letter-spacing: 0.06em;
+    text-align: center;
+  }
+  .footer-links {
+    display: flex; gap: 24px; list-style: none;
+  }
+  .footer-links a {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: rgba(255,255,255,0.7); }
+
+  /* ── FLOATING WHATSAPP ── */
+  .float-wa {
+    position: fixed; bottom: 32px; right: 32px; z-index: 200;
+    width: 56px; height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: floatIn 0.5s 1s both;
+  }
+  .float-wa:hover { transform: scale(1.1); box-shadow: 0 8px 28px rgba(37,211,102,0.5); }
+  .float-wa svg { width: 28px; height: 28px; fill: white; }
+  @keyframes floatIn { from { opacity: 0; transform: scale(0.5); } to { opacity: 1; transform: scale(1); } }
+
+  /* ── REVEAL ANIMATIONS ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+  .reveal-delay-5 { transition-delay: 0.5s; }
+
+  /* ── RESPONSIVE ── */
+
+ @media (max-width: 1024px) {
+    /* ── NAV MOBILE (Ativando o hambúrguer mais cedo) ── */
+    nav { padding: 18px 40px; }
+    nav.scrolled { padding: 14px 40px; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+
+    /* ── AJUSTES DE GRID ORIGINAIS DO 1024px ── */
+    .cards-grid { grid-template-columns: repeat(2, 1fr); }
+    .beneficios-grid { grid-template-columns: repeat(2, 1fr); }
+    .steps-layout { grid-template-columns: 1fr; }
+    .sobre-layout { grid-template-columns: 1fr; }
+    .sobre-img { position: static; max-width: 360px; }
+    .faq-layout { grid-template-columns: 1fr; }
+    .faq-side { position: static; }
+    .comparativo-layout { grid-template-columns: 1fr; }
+    .contato-wrapper { grid-template-columns: 1fr; padding: 60px 40px; }
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 18px 24px; }
+    nav.scrolled { padding: 14px 24px; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    .section-inner { padding: 70px 24px; }
+    .divider { margin: 0 24px; }
+    footer { padding: 36px 24px; flex-direction: column; text-align: center; }
+    .footer-links { justify-content: center; }
+    /* ── HERO MOBILE (Empilhado: Imagem em cima, Texto embaixo) ── */
+    #hero { 
+      min-height: auto; 
+      flex-direction: column; 
+      justify-content: flex-start; 
+    }
+    .hero-bg {
+      position: relative; /* Tira a imagem do fundo absoluto */
+      width: 100%;
+      height: 55vh; /* A imagem ocupa 55% da altura da tela */
+      flex-shrink: 0;
+    }
+    .hero-bg .hero-bg-desktop { display: none; }
+    .hero-bg .hero-bg-mobile { display: block; height: 100%; }
+    .hero-bg img { object-position: center top; }
+    
+    
+    .hero-text-col { 
+      margin-top: -120px; /* Puxa o bloco de texto para cima, sobrepondo a foto */
+      padding: 120px 24px 80px; /* Empurra o texto para baixo para garantir a leitura */
+      max-width: 100%; 
+      margin-right: 0; 
+      text-align: center; 
+      align-items: center; 
+      position: relative;
+      z-index: 2; /* Garante que o bloco fique por cima da imagem */
+      /* Degradê de cima para baixo: 0% de opacidade até 100% creme */
+      background: linear-gradient(to bottom, rgba(245, 240, 232, 0) 0%, rgba(245, 240, 232, 0.9) 80px, var(--creme) 120px); 
+    }
+    .hero-text-col .hero-btns { justify-content: center; }
+    .hero-text-col .hero-sub { text-align: center; margin-bottom: 32px; }
+    .cards-grid { grid-template-columns: 1fr; }
+    .beneficios-grid { grid-template-columns: 1fr; }
+    .contato-wrapper { padding: 48px 28px; border-radius: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo"><img src="logo.png" alt="Renata Razera Psicanalista" style="height:60px;width:auto;display:block;"></a>
+  <ul class="nav-links">
+    <li><a href="#para-quem">Para quem é</a></li>
+    <li><a href="#como-funciona">Como funciona</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#faq">Dúvidas</a></li>
+    <li><a href="#contato" class="nav-cta">Agendar sessão</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#para-quem" onclick="toggleMenu()">Para quem</a>
+  <a href="#como-funciona" onclick="toggleMenu()">Como funciona</a>
+  <a href="#beneficios" onclick="toggleMenu()">O que muda</a>
+  <a href="#sobre" onclick="toggleMenu()">Sobre mim</a>
+  <a href="#faq" onclick="toggleMenu()">Dúvidas</a>
+  <a href="#contato" onclick="toggleMenu()">Contato</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg">
+    <img src="heroDesktop.jpg" alt="Renata Razera, psicanalista" class="hero-bg-desktop">
+    <img src="heroMobile.jpg" alt="Renata Razera, psicanalista" class="hero-bg-mobile">
+    <div class="hero-bg-overlay"></div>
+  </div>
+  <div class="hero-text-col">
+    <p class="hero-eyebrow">Atendimento Presencial e On-line</p>
+    <h1 class="hero-headline">
+      Um espaço para<br>você se <em>ouvir</em><br>de verdade.
+    </h1>
+    <p class="hero-sub">
+    A psicanálise oferece uma escuta profunda.&nbsp; &nbsp;Não para te dizer o que fazer, mas para te ajudar a compreender quem você é e o que te move.</p>
+    <div class="hero-btns">
+      <a href="#contato" class="btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+        Agendar primeira sessão on-line
+      </a>
+      <a href="#como-funciona" class="btn-secondary">Como funciona</a>
+    </div>
+    <div class="hero-badge">
+      <div class="hero-badge-dot"></div>
+      <span>Primeira sessão gratuita · on-line · sigilosa</span>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM -->
+<section id="para-quem">
+  <div class="section-inner">
+    <p class="section-label reveal">Para quem é</p>
+    <h2 class="section-title reveal reveal-delay-1">A psicanálise não é só para<br><em>momentos de crise.</em></h2>
+    <p class="section-lead reveal reveal-delay-2">
+    Qualquer pessoa que queira se compreender melhor pode se beneficiar de uma análise,&nbsp; &nbsp;seja para elaborar um sofrimento específico ou simplesmente para se conhecer com mais profundidade. </p>
+    <div class="cards-grid">
+      <div class="card reveal reveal-delay-1">
+        <div class="card-icon"><img src="icon-ansiedade.png" alt="Ansiedade"></div>
+        <h3>Ansiedade e angústia</h3>
+        <p>Quando a inquietação é constante e parece não ter origem clara,&nbsp; &nbsp; &nbsp;a análise ajuda a entender o que está por trás.</p>
+      </div>
+      <div class="card reveal reveal-delay-2">
+        <div class="card-icon"><img src="icon-padroes.png" alt="Padrões"></div>
+        <h3>Padrões que se repetem</h3>
+        <p>Relacionamentos que sempre terminam igual, decisões que se repetem, sensações que voltam,&nbsp; &nbsp;a psicanálise vai à raiz.</p>
+      </div>
+      <div class="card reveal reveal-delay-3">
+        <div class="card-icon"><img src="icon-depressao.png" alt="Depressão"></div>
+        <h3>Depressão e tristeza</h3>
+        <p>Não apenas aliviar sintomas, mas compreender o que o sofrimento está comunicando sobre sua história e seu desejo.</p>
+      </div>
+      <div class="card reveal reveal-delay-1">
+        <div class="card-icon"><img src="icon-relacionamentos.png" alt="Relacionamentos"></div>
+        <h3>Dificuldades nos relacionamentos</h3>
+        <p>Conflitos interpessoais, dificuldade de se aproximar ou de se separar,&nbsp; &nbsp;a análise ilumina esses vínculos.</p>
+      </div>
+      <div class="card reveal reveal-delay-2">
+        <div class="card-icon"><img src="icon-transicoes.png" alt="Transições"></div>
+        <h3>Transições e crises</h3>
+        <p>Mudanças de carreira, perdas, novos ciclos,&nbsp; &nbsp;momentos em que algo precisa ser pensado com mais cuidado.</p>
+      </div>
+      <div class="card reveal reveal-delay-3">
+        <div class="card-icon"><img src="icon-autoconhecimento.png" alt="Autoconhecimento"></div>
+        <h3>Autoconhecimento</h3>
+        <p>Para quem quer entender seus próprios movimentos, desejos e formas de se relacionar com o mundo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- COMO FUNCIONA -->
+<section id="como-funciona">
+  <div class="section-inner">
+    <div class="steps-layout">
+      <div>
+        <p class="section-label reveal">Como funciona</p>
+        <h2 class="section-title reveal reveal-delay-1">O processo de <em>análise</em></h2>
+        <p class="section-lead reveal reveal-delay-2">
+          Um espaço semanal, sigiloso e sem julgamentos, onde sua fala é o caminho.
+        </p>
+        <div class="steps-list">
+          <div class="step reveal">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>Você fala livremente</h3>
+              <p>Não há roteiro, pauta ou ordem certa. Você fala sobre o que vier,&nbsp; pensamentos, sentimentos, sonhos, memórias. Essa liberdade é o coração da psicanálise.</p>
+            </div>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>Escuta atenta e qualificada</h3>
+              <p>Enquanto você fala, minha escuta é ativa , não para dar conselhos, mas para acompanhar o que aparece e o que se esquiva em suas palavras.</p>
+            </div>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>Conteúdos inconscientes se revelam</h3>
+              <p>Aos poucos, padrões, conflitos e aspectos que você não percebia sobre si mesmo vão se tornando mais claros, criando possibilidades reais de mudança.</p>
+            </div>
+          </div>
+          <div class="step reveal">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h3>Transformação estrutural</h3>
+              <p>A mudança não é adaptação , é uma reconfiguração profunda de como você sente, pensa e se relaciona. Dura muito além do processo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="steps-visual reveal">
+        <div class="steps-visual-quote">
+          "Falar sem saber o que vai dizer é o que permite ao inconsciente <span>aparecer.</span>"
+        </div>
+        <div class="steps-visual-line"></div>
+        <p class="steps-visual-caption">Fundamento psicanalítico</p>
+        <div style="margin-top: 36px; padding-top: 36px; border-top: 1px solid var(--creme-dk);">
+          <div style="display:flex; gap: 32px; justify-content:center;">
+            <div style="text-align:center;">
+              <div style="font-family:var(--serif); font-size:2rem; font-weight:300; color:var(--vinho);">50</div>
+              <div style="font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--txt-lt);">minutos</div>
+            </div>
+            <div style="width:1px; background:var(--creme-dk);"></div>
+            <div style="text-align:center;">
+              <div style="font-family:var(--serif); font-size:2rem; font-weight:300; color:var(--vinho);">1×</div>
+              <div style="font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--txt-lt);">por semana</div>
+            </div>
+            <div style="width:1px; background:var(--creme-dk);"></div>
+            <div style="text-align:center;">
+              <div style="font-family:var(--serif); font-size:2rem; font-weight:300; color:var(--vinho);">100%</div>
+              <div style="font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--txt-lt);">on-line</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section id="beneficios">
+  <div class="section-inner">
+    <p class="section-label reveal">O que pode mudar</p>
+    <h2 class="section-title reveal reveal-delay-1">Mudanças que vão além<br>dos <em>sintomas</em></h2>
+    <p class="section-lead reveal reveal-delay-2">
+      A psicanálise não trabalha para eliminar sintomas, mas para compreendê-los. E quando isso acontece, a transformação é mais profunda e duradoura.
+    </p>
+    <div class="beneficios-grid">
+      <div class="beneficio-item reveal">
+        <div class="beneficio-num">01</div>
+        <h3>Autoconhecimento ampliado</h3>
+        <p>Você começa a entender seus próprios movimentos — por que sente o que sente, por que faz o que faz.</p>
+      </div>
+      <div class="beneficio-item reveal reveal-delay-1">
+        <div class="beneficio-num">02</div>
+        <h3>Redução do sofrimento psíquico</h3>
+        <p>Ansiedade, angústia e tristeza perdem parte de sua força quando passam a fazer sentido dentro da sua história.</p>
+      </div>
+      <div class="beneficio-item reveal reveal-delay-2">
+        <div class="beneficio-num">03</div>
+        <h3>Elaboração emocional</h3>
+        <p>Aquilo que antes paralisava ou explodia começa a ser processado — com mais espaço e menos reatividade.</p>
+      </div>
+      <div class="beneficio-item reveal reveal-delay-1">
+        <div class="beneficio-num">04</div>
+        <h3>Relações mais saudáveis</h3>
+        <p>Compreender o que você busca e o que evita nos vínculos muda a qualidade de todas as suas relações.</p>
+      </div>
+      <div class="beneficio-item reveal reveal-delay-2">
+        <div class="beneficio-num">05</div>
+        <h3>Ressignificação de padrões</h3>
+        <p>Padrões repetitivos que antes pareciam inevitáveis começam a ser vistos,&nbsp; &nbsp;e, a partir daí, podem mudar.</p>
+      </div>
+      <div class="beneficio-item reveal reveal-delay-3">
+        <div class="beneficio-num">06</div>
+        <h3>Maior autonomia</h3>
+        <p>Decisões mais alinhadas com o que você realmente deseja,&nbsp; &nbsp;não com o que foi projetado sobre você.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARATIVO -->
+<section id="comparativo">
+  <div class="section-inner">
+    <p class="section-label reveal">Psicanálise x TCC</p>
+    <h2 class="section-title reveal reveal-delay-1">Qual abordagem<br>é <em>certa para você?</em></h2>
+    <p class="section-lead reveal reveal-delay-2">
+      Psicanálise e Terapia Cognitivo-Comportamental são abordagens distintas, com objetivos diferentes. Entender a diferença ajuda a fazer a escolha mais consciente.
+    </p>
+    <div class="comparativo-layout">
+      <div class="comparativo-col reveal">
+        <h3><span>TCC</span> — Terapia Cognitivo-Comportamental</h3>
+        <div class="comp-item">
+          <div class="comp-dot"></div>
+          <p><strong>Focada no presente:</strong> trabalha comportamentos e padrões de pensamento atuais com técnicas práticas e estruturadas.</p>
+        </div>
+        <div class="comp-item">
+          <div class="comp-dot"></div>
+          <p><strong>Sintoma como alvo:</strong> o objetivo é identificar e modificar padrões que causam sofrimento.</p>
+        </div>
+        <div class="comp-item">
+          <div class="comp-dot"></div>
+          <p><strong>Processo mais breve:</strong> costuma ter duração delimitada, com metas claras.</p>
+        </div>
+        <div class="comp-item">
+          <div class="comp-dot"></div>
+          <p><strong>Terapeuta mais ativo:</strong> conduz exercícios, propõe tarefas e intervém de forma mais direta.</p>
+        </div>
+      </div>
+      <div class="comparativo-col reveal reveal-delay-1">
+        <h3><span>Psicanálise</span></h3>
+        <div class="comp-item">
+          <div class="comp-dot vinho"></div>
+          <p><strong>Focada na história:</strong> investiga como o passado — especialmente a infância — estrutura o modo de viver hoje.</p>
+        </div>
+        <div class="comp-item">
+          <div class="comp-dot vinho"></div>
+          <p><strong>Sintoma como linguagem:</strong> o sintoma não é eliminado, é escutado — ele carrega um sentido que merece ser compreendido.</p>
+        </div>
+        <div class="comp-item">
+          <div class="comp-dot vinho"></div>
+          <p><strong>Processo contínuo:</strong> sem prazo fixo, respeita o tempo singular de cada pessoa.</p>
+        </div>
+        <div class="comp-item">
+          <div class="comp-dot vinho"></div>
+          <p><strong>Fala livre:</strong> você fala sem roteiro,&nbsp; &nbsp;e é justamente aí que o inconsciente aparece.</p>
+        </div>
+      </div>
+      <div class="comparativo-callout reveal">
+        <p>Se você sente que há algo que nenhuma técnica tocou , algo mais profundo, talvez sem nome , a psicanálise pode ser o espaço onde isso finalmente pode ser <em>escutado.</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="section-inner">
+    <div class="sobre-layout">
+      <div class="sobre-img reveal">
+        <img src="RenataRazera-psicanalista-sobre.jpg" alt="Renata Razera" onerror="this.style.background='linear-gradient(135deg,#D9CEBC,#EDE5D8)';this.style.height='420px'">
+        <div class="sobre-img-caption">
+          <strong>Renata Razera</strong>
+          <p>Psicanalista · CEP São Paulo<br>Atendimento on-line para adolescentes, adultos e idosos</p>
+        </div>
+      </div>
+      <div class="sobre-text">
+        <p class="section-label reveal">Sobre mim</p>
+        <h2 class="section-title reveal reveal-delay-1">A jornada de quem<br>chegou à psicanálise<br><em>pelo próprio caminho.</em></h2>
+        <p class="sobre-bio reveal reveal-delay-2">
+        Comecei minha trajetória como jornalista,&nbsp; &nbsp;quinze anos navegando por empresas, cargos e resultados que, no fundo, me afastavam do que eu realmente queria compreender: as pessoas, suas histórias, o que as move por dentro. </p>
+        <p class="sobre-bio reveal reveal-delay-2">
+          Minha formação em Semiótica Psicanalítica pela PUC-SP foi o começo de uma virada. De lá para cá, mergulhei na psicanálise com a seriedade que ela exige: formação pelo CEP, supervisão semanal, estudo contínuo de Freud, Winnicott, Roussillon — e minha própria análise, que já dura sete anos. Porque ninguém pode levar outro mais longe do que foi.
+        </p>
+        <p class="sobre-bio reveal reveal-delay-3">
+          Atendo adolescentes, adultos e idosos, on-line, com sessões semanais de 50 minutos. Trabalho com ansiedade, depressão, burnout, autoestima, traumas, dificuldades nos relacionamentos — e com quem simplesmente quer se conhecer melhor.
+        </p>
+        <div class="sobre-credentials">
+          <div class="cred-item reveal"> <span>Formação em Psicanálise pelo <strong>CEP — Centro de Estudos Psicanalíticos</strong></span>
+          </div>
+          <div class="cred-item reveal"> <span>Pós-Graduação em Semiótica Psicanalítica pela <strong>PUC-SP</strong></span>
+          </div>
+          <div class="cred-item reveal"> <span>Curso de formação no <strong>Instituto de Psiquiatria do HCFMUSP</strong> — A escuta do paciente psiquiátrico</span>
+          </div>
+          <div class="cred-item reveal"> <span>Membra da <strong>Rede Habitare</strong> — prevenção em saúde mental materno-infantil</span>
+          </div>
+          <div class="cred-item reveal"> <span>Jornalista pela <strong>Universidade Mackenzie</strong> · MBA pela Unisinos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-inner">
+    <div class="faq-layout">
+      <div class="faq-side">
+        <p class="section-label reveal">Dúvidas frequentes</p>
+        <h2 class="section-title reveal reveal-delay-1">Perguntas que<br>chegam com<br><em>frequência.</em></h2>
+        <p class="section-lead reveal reveal-delay-2" style="margin-bottom: 0;">
+        Se sua dúvida não estiver aqui, pode entrar em contato,&nbsp; &nbsp;estarei à disposição. </p>
+        <div style="margin-top: 36px;" class="reveal">
+          <a href="#contato" class="btn-primary" style="width: fit-content;">Fale comigo</a>
+        </div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Preciso ter um problema grave para iniciar?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            Não. A psicanálise não é indicada apenas para situações de sofrimento intenso. Muitas pessoas a procuram com o objetivo de se conhecer melhor, compreender suas emoções ou dar sentido a algo que as incomoda sem nome definido.
+          </div></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Como são as sessões on-line?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            As sessões são realizadas por videochamada, com duração de 50 minutos. O sigilo, o cuidado e a qualidade do processo analítico são exatamente os mesmos do atendimento presencial — a diferença é só o meio.
+          </div></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Qual a frequência dos atendimentos?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            A psicanálise requer ao menos uma sessão por semana — essa regularidade é fundamental para que o processo analítico se sustente e produza efeitos reais ao longo do tempo.
+          </div></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Quanto tempo dura o tratamento?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            Não há um tempo pré-definido. A duração depende de cada pessoa, de suas questões e do que busca no processo. A análise respeita seu ritmo singular — e isso é parte essencial do que a torna eficaz.
+          </div></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            O que é a primeira sessão gratuita?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            A primeira sessão tem como objetivo nos conhecermos — você pode falar sobre o que te trouxe até aqui, entender como funciona o processo e verificar se a psicanálise é a abordagem certa para você. Não há compromisso. É também nesse momento que definimos o valor das sessões seguintes.
+          </div></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            As sessões são sigilosas?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            Sim. O sigilo é um princípio ético fundamental da psicanálise. Tudo o que for dito nas sessões permanece entre você e eu — é a condição para que exista um espaço de fala verdadeiramente livre.
+          </div></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            A psicanalista dá conselhos?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            Não — e isso é intencional. O papel da psicanalista não é oferecer soluções prontas, mas ajudar você a construir a sua própria compreensão. A análise aposta na sua capacidade de encontrar seus próprios caminhos.
+          </div></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Qual o valor das sessões?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a"><div class="faq-a-inner">
+            O valor é definido individualmente, levando em conta a situação de cada pessoa. Isso é combinado diretamente na primeira sessão — que é gratuita.
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <div class="section-inner">
+    <div class="contato-wrapper">
+      <div class="contato-text">
+        <p class="section-label">Contato</p>
+        <h2 class="section-title">Pronta para<br>dar o <em>primeiro passo?</em></h2>
+        <p class="contato-sub">
+        Entre em contato pelo canal de sua preferência. A primeira sessão é gratuita e sem compromisso,&nbsp; &nbsp;é só um primeiro encontro. </p>
+        <span class="contato-first-free">✦ Primeira sessão gratuita</span>
+      </div>
+      <div class="contato-channels">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/5511999999999?text=Olá,%20Renata!%20Gostaria%20de%20agendar%20uma%20primeira%20sessão." class="channel-btn" target="_blank" rel="noopener">
+          <div class="channel-icon">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.374 0 0 5.373 0 12c0 2.138.558 4.144 1.535 5.887L.057 23.492a.5.5 0 00.604.64l5.857-1.479A11.944 11.944 0 0012 24c6.626 0 12-5.373 12-12S18.626 0 12 0zm0 22a9.954 9.954 0 01-5.03-1.357l-.36-.214-3.742.945.983-3.618-.235-.372A9.964 9.964 0 012 12C2 6.478 6.477 2 12 2s10 4.478 10 10-4.477 10-10 10z"/></svg>
+          </div>
+          <div class="channel-info">
+            <div class="channel-label">WhatsApp</div>
+            <div class="channel-value">Enviar mensagem</div>
+          </div>
+          <div class="channel-arrow">→</div>
+        </a>
+        <!-- E-mail -->
+        <a href="mailto:contato@renatarareza.com.br" class="channel-btn">
+          <div class="channel-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div class="channel-info">
+            <div class="channel-label">E-mail</div>
+            <div class="channel-value">contato@renatarareza.com.br</div>
+          </div>
+          <div class="channel-arrow">→</div>
+        </a>
+        <!-- Agendamento -->
+        <a href="https://calendly.com/renatarareza" class="channel-btn" target="_blank" rel="noopener">
+          <div class="channel-icon">
+            <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+          </div>
+          <div class="channel-info">
+            <div class="channel-label">Agendamento on-line</div>
+            <div class="channel-value">Escolher horário</div>
+          </div>
+          <div class="channel-arrow">→</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Renata Razera</div>
+  <p class="footer-copy">© 2026 Renata Razera · Psicanalista<br>
+  CRP 0000 · Atendimento on-line e Presencial</p>
+  <ul class="footer-links">
+    <li><a href="#para-quem">Para quem é</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/5511999999999?text=Olá,%20Renata!%20Gostaria%20de%20saber%20mais%20sobre%20as%20sessões." class="float-wa" target="_blank" rel="noopener" title="WhatsApp">
+<svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.374 0 0 5.373 0 12c0 2.138.558 4.144 1.535 5.887L.057 23.492a.5.5 0 00.604.64l5.857-1.479A11.944 11.944 0 0012 24c6.626 0 12-5.373 12-12S18.626 0 12 0zm0 22a9.954 9.954 0 01-5.03-1.357l-.36-.214-3.742.945.983-3.618-.235-.372A9.964 9.964 0 012 12C2 6.478 6.477 2 12 2s10 4.478 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Mobile menu
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const answer = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('active');
+
+    document.querySelectorAll('.faq-q.active').forEach(b => {
+      b.classList.remove('active');
+      b.nextElementSibling.style.maxHeight = null;
+    });
+
+    if (!isOpen) {
+      btn.classList.add('active');
+      answer.style.maxHeight = answer.scrollHeight + 'px';
+    }
+  }
+
+  // Intersection Observer for reveals
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
