@@ -404,9 +404,6 @@
     line-height: 1.8;
   }
 
-  /* ── COMO FUNCIONA ── */
-  #como-funciona { background: var(--creme); }
-
   .steps-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -452,9 +449,11 @@
   .steps-visual {
     background: var(--white);
     border-radius: var(--rLg);
-    padding: 48px 40px;
+    padding: 60px 40px;
     border: 1px solid var(--creme-dk);
     text-align: center;
+    max-width: 800px;    
+    margin: 60px auto 0;
   }
   .steps-visual-quote {
     font-family: var(--serif);
@@ -478,14 +477,14 @@
     margin: 20px auto;
   }
 
-  /* ── BENEFÍCIOS ── */
-  #beneficios { background: var(--vinho-dk); }
-  #beneficios .section-label { color: var(--rose); }
-  #beneficios .section-title { color: var(--white); }
-  #beneficios .section-title em { color: var(--rose); }
-  #beneficios .section-lead { color: rgba(255,255,255,0.65); }
+  /* ── COMO FUNCIONA ── */
+  #como-funciona { background: var(--vinho); }
+  #como-funciona .section-label { color: var(--rose); }
+  #como-funciona .section-title { color: var(--white); }
+  #como-funciona .section-title em { color: var(--rose); }
+  #como-funciona .section-lead { color: rgba(255,255,255,0.65); }
 
-  .beneficios-grid {
+  .como-funciona-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2px;
@@ -719,6 +718,40 @@
     line-height: 1.85;
   }
 
+	/* Estilo para os itens dentro da resposta do FAQ */
+  .faq-sub-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .faq-sub-item {
+    background: var(--creme);
+    padding: 20px;
+    border-radius: var(--r);
+    border-left: 3px solid var(--vinho); /* Estilo similar ao comparativo/steps */
+    transition: transform 0.2s;
+  }
+
+  .faq-sub-item:hover {
+    transform: translateX(5px);
+  }
+
+  .faq-sub-item h4 {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    color: var(--vinho);
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .faq-sub-item p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+	
   /* ── CONTATO ── */
   #contato { background: var(--creme); }
   .contato-wrapper {
@@ -892,7 +925,7 @@
 
     /* ── AJUSTES DE GRID ORIGINAIS DO 1024px ── */
     .cards-grid { grid-template-columns: repeat(2, 1fr); }
-    .beneficios-grid { grid-template-columns: repeat(2, 1fr); }
+    .como-funciona-grid { grid-template-columns: repeat(2, 1fr); }
     .steps-layout { grid-template-columns: 1fr; }
     .sobre-layout { grid-template-columns: 1fr; }
     .sobre-img { position: static; max-width: 360px; }
@@ -943,7 +976,7 @@
     .hero-text-col .hero-btns { justify-content: center; }
     .hero-text-col .hero-sub { text-align: center; margin-bottom: 32px; }
     .cards-grid { grid-template-columns: 1fr; }
-    .beneficios-grid { grid-template-columns: 1fr; }
+    .como-funciona-grid { grid-template-columns: 1fr; }
     .contato-wrapper { padding: 48px 28px; border-radius: 20px; }
   }
 </style>
@@ -968,7 +1001,6 @@
 <div class="mobile-menu" id="mobileMenu">
   <a href="#para-quem" onclick="toggleMenu()">Para quem</a>
   <a href="#como-funciona" onclick="toggleMenu()">Como funciona</a>
-  <a href="#beneficios" onclick="toggleMenu()">O que muda</a>
   <a href="#sobre" onclick="toggleMenu()">Sobre mim</a>
   <a href="#faq" onclick="toggleMenu()">Dúvidas</a>
   <a href="#contato" onclick="toggleMenu()">Contato</a>
@@ -984,20 +1016,11 @@
   <div class="hero-text-col">
     <p class="hero-eyebrow">Atendimento Presencial e On-line</p>
     <h1 class="hero-headline">
-      Um espaço para<br>você se <em>ouvir</em><br>de verdade.
-    </h1>
+      Um espaço para<br> <em>você</em>.</h1>
     <p class="hero-sub">
     A psicanálise oferece uma escuta profunda.&nbsp; &nbsp;Não para te dizer o que fazer, mas para te ajudar a compreender quem você é e o que te move.</p>
     <div class="hero-btns">
-      <a href="#contato" class="btn-primary">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
-        Agendar primeira sessão on-line
-      </a>
       <a href="#como-funciona" class="btn-secondary">Como funciona</a>
-    </div>
-    <div class="hero-badge">
-      <div class="hero-badge-dot"></div>
-      <span>Primeira sessão gratuita · on-line · sigilosa</span>
     </div>
   </div>
 </section>
@@ -1006,34 +1029,33 @@
 <section id="para-quem">
   <div class="section-inner">
     <p class="section-label reveal">Para quem é</p>
-    <h2 class="section-title reveal reveal-delay-1">A psicanálise não é só para<br><em>momentos de crise.</em></h2>
-    <p class="section-lead reveal reveal-delay-2">
-    Qualquer pessoa que queira se compreender melhor pode se beneficiar de uma análise,&nbsp; &nbsp;seja para elaborar um sofrimento específico ou simplesmente para se conhecer com mais profundidade. </p>
+    <h2 class="section-title reveal reveal-delay-1">A psicanálise é indicada para pessoas que desejam <em>compreender</em> de forma mais profunda seus <em>pensamentos, emoções e comportamentos</em>. 
+</h2>
     <div class="cards-grid">
       <div class="card reveal reveal-delay-1">
         <div class="card-icon"><img src="icon-ansiedade.png" alt="Ansiedade"></div>
-        <h3>Ansiedade e angústia</h3>
-        <p>Quando a inquietação é constante e parece não ter origem clara,&nbsp; &nbsp; &nbsp;a análise ajuda a entender o que está por trás.</p>
+        <h3>Ansiedade, angústia e depressão</h3>
+        <p>Quando a inquietação é constante e parece não ter origem clara,a análise ajuda a entender o que está por trás.</p>
       </div>
       <div class="card reveal reveal-delay-2">
         <div class="card-icon"><img src="icon-padroes.png" alt="Padrões"></div>
-        <h3>Padrões que se repetem</h3>
-        <p>Relacionamentos que sempre terminam igual, decisões que se repetem, sensações que voltam,&nbsp; &nbsp;a psicanálise vai à raiz.</p>
+        <h3>Comportamentos Repetitivos e/ou autodestrutivos</h3>
+        <p>Relacionamentos que sempre terminam igual, decisões que se repetem, sensações que voltam, a psicanálise vai à raiz.</p>
       </div>
       <div class="card reveal reveal-delay-3">
         <div class="card-icon"><img src="icon-depressao.png" alt="Depressão"></div>
-        <h3>Depressão e tristeza</h3>
-        <p>Não apenas aliviar sintomas, mas compreender o que o sofrimento está comunicando sobre sua história e seu desejo.</p>
+        <h3>Situações de Crise</h3>
+        <p>.</p>
       </div>
       <div class="card reveal reveal-delay-1">
         <div class="card-icon"><img src="icon-relacionamentos.png" alt="Relacionamentos"></div>
         <h3>Dificuldades nos relacionamentos</h3>
-        <p>Conflitos interpessoais, dificuldade de se aproximar ou de se separar,&nbsp; &nbsp;a análise ilumina esses vínculos.</p>
+        <p>Conflitos interpessoais, dificuldade de se aproximar ou de se separar,a análise ilumina esses vínculos.</p>
       </div>
       <div class="card reveal reveal-delay-2">
         <div class="card-icon"><img src="icon-transicoes.png" alt="Transições"></div>
-        <h3>Transições e crises</h3>
-        <p>Mudanças de carreira, perdas, novos ciclos,&nbsp; &nbsp;momentos em que algo precisa ser pensado com mais cuidado.</p>
+        <h3>Momentos de Transição</h3>
+        <p>Mudanças de carreira, perdas, novos ciclos, momentos em que algo precisa ser pensado com mais cuidado.</p>
       </div>
       <div class="card reveal reveal-delay-3">
         <div class="card-icon"><img src="icon-autoconhecimento.png" alt="Autoconhecimento"></div>
@@ -1046,7 +1068,7 @@
 
 <div class="divider"></div>
 
-<!-- COMO FUNCIONA -->
+<!-- COMO FUNCIONA 
 <section id="como-funciona">
   <div class="section-inner">
     <div class="steps-layout">
@@ -1054,164 +1076,78 @@
         <p class="section-label reveal">Como funciona</p>
         <h2 class="section-title reveal reveal-delay-1">O processo de <em>análise</em></h2>
         <p class="section-lead reveal reveal-delay-2">
-          Um espaço semanal, sigiloso e sem julgamentos, onde sua fala é o caminho.
+          Um espaço sigiloso e acolhedor.
         </p>
         <div class="steps-list">
           <div class="step reveal">
             <div class="step-num">01</div>
             <div class="step-content">
               <h3>Você fala livremente</h3>
-              <p>Não há roteiro, pauta ou ordem certa. Você fala sobre o que vier,&nbsp; pensamentos, sentimentos, sonhos, memórias. Essa liberdade é o coração da psicanálise.</p>
+              <p>Essa livre associação é um elemento central da psicanálise, pois permite o acesso a conteúdos que muitas vezes não estão plenamente conscientes.</p>
             </div>
           </div>
           <div class="step reveal">
             <div class="step-num">02</div>
             <div class="step-content">
               <h3>Escuta atenta e qualificada</h3>
-              <p>Enquanto você fala, minha escuta é ativa , não para dar conselhos, mas para acompanhar o que aparece e o que se esquiva em suas palavras.</p>
+              <p>Intervindo de forma pontual a fim de auxiliar na compreensão de conflitos internos, padrões de comportamento e aspectos inconscientes envolvidos nas vivências de cada um.</p>
             </div>
           </div>
           <div class="step reveal">
             <div class="step-num">03</div>
             <div class="step-content">
-              <h3>Conteúdos inconscientes se revelam</h3>
-              <p>Aos poucos, padrões, conflitos e aspectos que você não percebia sobre si mesmo vão se tornando mais claros, criando possibilidades reais de mudança.</p>
-            </div>
-          </div>
-          <div class="step reveal">
-            <div class="step-num">04</div>
-            <div class="step-content">
-              <h3>Transformação estrutural</h3>
-              <p>A mudança não é adaptação , é uma reconfiguração profunda de como você sente, pensa e se relaciona. Dura muito além do processo.</p>
+              <h3>Transformação Estrutural</h3>
+              <p>Conteúdos antes desconhecidos ou pouco elaborados tornam-se mais claros, promovendo a possibilidade de mudanças na forma de sentir, pensar e se relacionar.</p>
             </div>
           </div>
         </div>
       </div>
       <div class="steps-visual reveal">
         <div class="steps-visual-quote">
-          "Falar sem saber o que vai dizer é o que permite ao inconsciente <span>aparecer.</span>"
+          "Eis uma palavra boa em nossa língua: <span>CURA</span>. Se essa palavra pudesse falar, ela contaria uma história."
         </div>
         <div class="steps-visual-line"></div>
-        <p class="steps-visual-caption">Fundamento psicanalítico</p>
-        <div style="margin-top: 36px; padding-top: 36px; border-top: 1px solid var(--creme-dk);">
-          <div style="display:flex; gap: 32px; justify-content:center;">
-            <div style="text-align:center;">
-              <div style="font-family:var(--serif); font-size:2rem; font-weight:300; color:var(--vinho);">50</div>
-              <div style="font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--txt-lt);">minutos</div>
-            </div>
-            <div style="width:1px; background:var(--creme-dk);"></div>
-            <div style="text-align:center;">
-              <div style="font-family:var(--serif); font-size:2rem; font-weight:300; color:var(--vinho);">1×</div>
-              <div style="font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--txt-lt);">por semana</div>
-            </div>
-            <div style="width:1px; background:var(--creme-dk);"></div>
-            <div style="text-align:center;">
-              <div style="font-family:var(--serif); font-size:2rem; font-weight:300; color:var(--vinho);">100%</div>
-              <div style="font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--txt-lt);">on-line</div>
-            </div>
-          </div>
-        </div>
+        <p class="steps-visual-caption">DONALD WINNICOTT</p>
       </div>
     </div>
   </div>
-</section>
+</section>-->
 
-<!-- BENEFÍCIOS -->
-<section id="beneficios">
+<!-- COMO FUNCIONA -->
+<section id="como-funciona">
   <div class="section-inner">
-    <p class="section-label reveal">O que pode mudar</p>
-    <h2 class="section-title reveal reveal-delay-1">Mudanças que vão além<br>dos <em>sintomas</em></h2>
+    <p class="section-label reveal">Como Funciona</p>
+    <h2 class="section-title reveal reveal-delay-1">O processo de <em>análise</em></h2>
     <p class="section-lead reveal reveal-delay-2">
-      A psicanálise não trabalha para eliminar sintomas, mas para compreendê-los. E quando isso acontece, a transformação é mais profunda e duradoura.
+      Um espaço sigiloso e acolhedor.
     </p>
-    <div class="beneficios-grid">
+    <div class="como-funciona-grid">
       <div class="beneficio-item reveal">
         <div class="beneficio-num">01</div>
-        <h3>Autoconhecimento ampliado</h3>
-        <p>Você começa a entender seus próprios movimentos — por que sente o que sente, por que faz o que faz.</p>
+        <h3>Você fala livremente</h3>
+        <p>Essa livre associação é um elemento central da psicanálise, pois permite o acesso a conteúdos que muitas vezes não estão plenamente conscientes.</p>
       </div>
       <div class="beneficio-item reveal reveal-delay-1">
         <div class="beneficio-num">02</div>
-        <h3>Redução do sofrimento psíquico</h3>
-        <p>Ansiedade, angústia e tristeza perdem parte de sua força quando passam a fazer sentido dentro da sua história.</p>
+        <h3>Escuta atenta e qualificada</h3>
+        <p>Intervindo de forma pontual a fim de auxiliar na compreensão de conflitos internos, padrões de comportamento e aspectos inconscientes envolvidos nas vivências de cada um.</p>
       </div>
       <div class="beneficio-item reveal reveal-delay-2">
         <div class="beneficio-num">03</div>
-        <h3>Elaboração emocional</h3>
-        <p>Aquilo que antes paralisava ou explodia começa a ser processado — com mais espaço e menos reatividade.</p>
-      </div>
-      <div class="beneficio-item reveal reveal-delay-1">
-        <div class="beneficio-num">04</div>
-        <h3>Relações mais saudáveis</h3>
-        <p>Compreender o que você busca e o que evita nos vínculos muda a qualidade de todas as suas relações.</p>
-      </div>
-      <div class="beneficio-item reveal reveal-delay-2">
-        <div class="beneficio-num">05</div>
-        <h3>Ressignificação de padrões</h3>
-        <p>Padrões repetitivos que antes pareciam inevitáveis começam a ser vistos,&nbsp; &nbsp;e, a partir daí, podem mudar.</p>
-      </div>
-      <div class="beneficio-item reveal reveal-delay-3">
-        <div class="beneficio-num">06</div>
-        <h3>Maior autonomia</h3>
-        <p>Decisões mais alinhadas com o que você realmente deseja,&nbsp; &nbsp;não com o que foi projetado sobre você.</p>
+        <h3>Transformação Estrutural</h3>
+        <p>Conteúdos antes desconhecidos ou pouco elaborados tornam-se mais claros, promovendo a possibilidade de mudanças na forma de sentir, pensar e se relacionar.</p>
       </div>
     </div>
+	    <div class="steps-visual reveal">
+        <div class="steps-visual-quote">
+          "Eis uma palavra boa em nossa língua: <span>CURA</span>. Se essa palavra pudesse falar, ela contaria uma história."
+        </div>
+        <div class="steps-visual-line"></div>
+        <p class="steps-visual-caption">DONALD WINNICOTT</p>
+      </div>
   </div>
-</section>
+	</section>
 
-<!-- COMPARATIVO -->
-<section id="comparativo">
-  <div class="section-inner">
-    <p class="section-label reveal">Psicanálise x TCC</p>
-    <h2 class="section-title reveal reveal-delay-1">Qual abordagem<br>é <em>certa para você?</em></h2>
-    <p class="section-lead reveal reveal-delay-2">
-      Psicanálise e Terapia Cognitivo-Comportamental são abordagens distintas, com objetivos diferentes. Entender a diferença ajuda a fazer a escolha mais consciente.
-    </p>
-    <div class="comparativo-layout">
-      <div class="comparativo-col reveal">
-        <h3><span>TCC</span> — Terapia Cognitivo-Comportamental</h3>
-        <div class="comp-item">
-          <div class="comp-dot"></div>
-          <p><strong>Focada no presente:</strong> trabalha comportamentos e padrões de pensamento atuais com técnicas práticas e estruturadas.</p>
-        </div>
-        <div class="comp-item">
-          <div class="comp-dot"></div>
-          <p><strong>Sintoma como alvo:</strong> o objetivo é identificar e modificar padrões que causam sofrimento.</p>
-        </div>
-        <div class="comp-item">
-          <div class="comp-dot"></div>
-          <p><strong>Processo mais breve:</strong> costuma ter duração delimitada, com metas claras.</p>
-        </div>
-        <div class="comp-item">
-          <div class="comp-dot"></div>
-          <p><strong>Terapeuta mais ativo:</strong> conduz exercícios, propõe tarefas e intervém de forma mais direta.</p>
-        </div>
-      </div>
-      <div class="comparativo-col reveal reveal-delay-1">
-        <h3><span>Psicanálise</span></h3>
-        <div class="comp-item">
-          <div class="comp-dot vinho"></div>
-          <p><strong>Focada na história:</strong> investiga como o passado — especialmente a infância — estrutura o modo de viver hoje.</p>
-        </div>
-        <div class="comp-item">
-          <div class="comp-dot vinho"></div>
-          <p><strong>Sintoma como linguagem:</strong> o sintoma não é eliminado, é escutado — ele carrega um sentido que merece ser compreendido.</p>
-        </div>
-        <div class="comp-item">
-          <div class="comp-dot vinho"></div>
-          <p><strong>Processo contínuo:</strong> sem prazo fixo, respeita o tempo singular de cada pessoa.</p>
-        </div>
-        <div class="comp-item">
-          <div class="comp-dot vinho"></div>
-          <p><strong>Fala livre:</strong> você fala sem roteiro,&nbsp; &nbsp;e é justamente aí que o inconsciente aparece.</p>
-        </div>
-      </div>
-      <div class="comparativo-callout reveal">
-        <p>Se você sente que há algo que nenhuma técnica tocou , algo mais profundo, talvez sem nome , a psicanálise pode ser o espaço onde isso finalmente pode ser <em>escutado.</em></p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <div class="divider"></div>
 
@@ -1223,28 +1159,28 @@
         <img src="RenataRazera-psicanalista-sobre.jpg" alt="Renata Razera" onerror="this.style.background='linear-gradient(135deg,#D9CEBC,#EDE5D8)';this.style.height='420px'">
         <div class="sobre-img-caption">
           <strong>Renata Razera</strong>
-          <p>Psicanalista · CEP São Paulo<br>Atendimento on-line para adolescentes, adultos e idosos</p>
+          <p>Psicanalista</p>
         </div>
       </div>
       <div class="sobre-text">
         <p class="section-label reveal">Sobre mim</p>
-        <h2 class="section-title reveal reveal-delay-1">A jornada de quem<br>chegou à psicanálise<br><em>pelo próprio caminho.</em></h2>
+        <h2 class="section-title reveal reveal-delay-1">A jornada de quem chegou à psicanálise <em>pelo próprio caminho.</em></h2>
         <p class="sobre-bio reveal reveal-delay-2">
         Comecei minha trajetória como jornalista,&nbsp; &nbsp;quinze anos navegando por empresas, cargos e resultados que, no fundo, me afastavam do que eu realmente queria compreender: as pessoas, suas histórias, o que as move por dentro. </p>
         <p class="sobre-bio reveal reveal-delay-2">
           Minha formação em Semiótica Psicanalítica pela PUC-SP foi o começo de uma virada. De lá para cá, mergulhei na psicanálise com a seriedade que ela exige: formação pelo CEP, supervisão semanal, estudo contínuo de Freud, Winnicott, Roussillon — e minha própria análise, que já dura sete anos. Porque ninguém pode levar outro mais longe do que foi.
         </p>
-        <p class="sobre-bio reveal reveal-delay-3">
-          Atendo adolescentes, adultos e idosos, on-line, com sessões semanais de 50 minutos. Trabalho com ansiedade, depressão, burnout, autoestima, traumas, dificuldades nos relacionamentos — e com quem simplesmente quer se conhecer melhor.
+        <p class="sobre-bio reveal reveal-delay-3"> <strong>Atendimento online e presencial.</strong> <br>
+          <strong>CentralMed</strong>: R. Cap. Avelino Bastos, 756 - Centro, Cruzeiro/SP <br>
         </p>
-        <div class="sobre-credentials">
+<div class="sobre-credentials">
           <div class="cred-item reveal"> <span>Formação em Psicanálise pelo <strong>CEP — Centro de Estudos Psicanalíticos</strong></span>
           </div>
           <div class="cred-item reveal"> <span>Pós-Graduação em Semiótica Psicanalítica pela <strong>PUC-SP</strong></span>
           </div>
-          <div class="cred-item reveal"> <span>Curso de formação no <strong>Instituto de Psiquiatria do HCFMUSP</strong> — A escuta do paciente psiquiátrico</span>
+          <div class="cred-item reveal"> <span>Especialização no <strong>HC USP</strong> </span>
           </div>
-          <div class="cred-item reveal"> <span>Membra da <strong>Rede Habitare</strong> — prevenção em saúde mental materno-infantil</span>
+          <div class="cred-item reveal"> <span>Membra da <strong>Rede Habitare</strong> </span>
           </div>
           <div class="cred-item reveal"> <span>Jornalista pela <strong>Universidade Mackenzie</strong> · MBA pela Unisinos</span>
           </div>
@@ -1260,12 +1196,7 @@
     <div class="faq-layout">
       <div class="faq-side">
         <p class="section-label reveal">Dúvidas frequentes</p>
-        <h2 class="section-title reveal reveal-delay-1">Perguntas que<br>chegam com<br><em>frequência.</em></h2>
-        <p class="section-lead reveal reveal-delay-2" style="margin-bottom: 0;">
-        Se sua dúvida não estiver aqui, pode entrar em contato,&nbsp; &nbsp;estarei à disposição. </p>
-        <div style="margin-top: 36px;" class="reveal">
-          <a href="#contato" class="btn-primary" style="width: fit-content;">Fale comigo</a>
-        </div>
+        <h2 class="section-title reveal reveal-delay-1">Se ainda ficou com alguma dúvida, me chame, <em>será um prazer te atender.</em></h2>
       </div>
       <div class="faq-list">
         <div class="faq-item reveal">
@@ -1283,16 +1214,7 @@
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-a"><div class="faq-a-inner">
-            As sessões são realizadas por videochamada, com duração de 50 minutos. O sigilo, o cuidado e a qualidade do processo analítico são exatamente os mesmos do atendimento presencial — a diferença é só o meio.
-          </div></div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            Qual a frequência dos atendimentos?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">
-            A psicanálise requer ao menos uma sessão por semana — essa regularidade é fundamental para que o processo analítico se sustente e produza efeitos reais ao longo do tempo.
+            As sessões são realizadas por videochamada. O sigilo, o cuidado e a qualidade do processo analítico são exatamente os mesmos do atendimento presencial — a diferença é só o meio.
           </div></div>
         </div>
         <div class="faq-item reveal">
@@ -1306,39 +1228,40 @@
         </div>
         <div class="faq-item reveal">
           <button class="faq-q" onclick="toggleFaq(this)">
-            O que é a primeira sessão gratuita?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">
-            A primeira sessão tem como objetivo nos conhecermos — você pode falar sobre o que te trouxe até aqui, entender como funciona o processo e verificar se a psicanálise é a abordagem certa para você. Não há compromisso. É também nesse momento que definimos o valor das sessões seguintes.
-          </div></div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            As sessões são sigilosas?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">
-            Sim. O sigilo é um princípio ético fundamental da psicanálise. Tudo o que for dito nas sessões permanece entre você e eu — é a condição para que exista um espaço de fala verdadeiramente livre.
-          </div></div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            A psicanalista dá conselhos?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-a"><div class="faq-a-inner">
-            Não — e isso é intencional. O papel da psicanalista não é oferecer soluções prontas, mas ajudar você a construir a sua própria compreensão. A análise aposta na sua capacidade de encontrar seus próprios caminhos.
-          </div></div>
-        </div>
-        <div class="faq-item reveal">
-          <button class="faq-q" onclick="toggleFaq(this)">
             Qual o valor das sessões?
             <span class="faq-icon">+</span>
           </button>
           <div class="faq-a"><div class="faq-a-inner">
             O valor é definido individualmente, levando em conta a situação de cada pessoa. Isso é combinado diretamente na primeira sessão — que é gratuita.
           </div></div>
+        </div>
+		 <div class="faq-item reveal">
+          <button class="faq-q" onclick="toggleFaq(this)">
+            Qual a diferença entre Psicologia, Psicanálise e Psiquiatria?
+            <span class="faq-icon">+</span>
+          </button>
+         <div class="faq-a">
+  <div class="faq-a-inner">
+    <p>Embora atuem no cuidado com a saúde mental, essas áreas possuem métodos e objetivos distintos. Entenda as diferenças:</p>
+    
+    <div class="faq-sub-grid">
+      <div class="faq-sub-item">
+        <h4>Psicologia</h4>
+        <p>Estuda o comportamento e processos mentais através de diversas abordagens (como a TCC). Foca em intervenções diretas, metas claras e tarefas para lidar com sintomas no presente.</p>
+      </div>
+
+      <div class="faq-sub-item">
+        <h4>Psicanálise</h4>
+        <p>Investiga o inconsciente e a subjetividade. É um processo profundo e contínuo que busca compreender a raiz dos conflitos, promovendo mudanças estruturais na forma como a pessoa se relaciona com o mundo.</p>
+      </div>
+
+      <div class="faq-sub-item">
+        <h4>Psiquiatria</h4>
+        <p>Especialidade médica voltada ao diagnóstico biológico e tratamento de transtornos mentais, com autonomia para prescrição de medicamentos quando necessário.</p>
+      </div>
+    </div>
+  </div>
+</div>
         </div>
       </div>
     </div>
@@ -1350,32 +1273,17 @@
   <div class="section-inner">
     <div class="contato-wrapper">
       <div class="contato-text">
-        <p class="section-label">Contato</p>
-        <h2 class="section-title">Pronta para<br>dar o <em>primeiro passo?</em></h2>
-        <p class="contato-sub">
-        Entre em contato pelo canal de sua preferência. A primeira sessão é gratuita e sem compromisso,&nbsp; &nbsp;é só um primeiro encontro. </p>
-        <span class="contato-first-free">✦ Primeira sessão gratuita</span>
+        <h2 class="section-title"><em>Contato</em></h2>
       </div>
       <div class="contato-channels">
         <!-- WhatsApp -->
-        <a href="https://wa.me/5511999999999?text=Olá,%20Renata!%20Gostaria%20de%20agendar%20uma%20primeira%20sessão." class="channel-btn" target="_blank" rel="noopener">
+        <a href="https://wa.me/5511985329959?text=Olá,%20Renata!%20Gostaria%20de%20mais%20informações%20sobre%20as%20sessões." class="channel-btn" target="_blank" rel="noopener">
           <div class="channel-icon">
             <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.374 0 0 5.373 0 12c0 2.138.558 4.144 1.535 5.887L.057 23.492a.5.5 0 00.604.64l5.857-1.479A11.944 11.944 0 0012 24c6.626 0 12-5.373 12-12S18.626 0 12 0zm0 22a9.954 9.954 0 01-5.03-1.357l-.36-.214-3.742.945.983-3.618-.235-.372A9.964 9.964 0 012 12C2 6.478 6.477 2 12 2s10 4.478 10 10-4.477 10-10 10z"/></svg>
           </div>
           <div class="channel-info">
             <div class="channel-label">WhatsApp</div>
             <div class="channel-value">Enviar mensagem</div>
-          </div>
-          <div class="channel-arrow">→</div>
-        </a>
-        <!-- E-mail -->
-        <a href="mailto:contato@renatarareza.com.br" class="channel-btn">
-          <div class="channel-icon">
-            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          </div>
-          <div class="channel-info">
-            <div class="channel-label">E-mail</div>
-            <div class="channel-value">contato@renatarareza.com.br</div>
           </div>
           <div class="channel-arrow">→</div>
         </a>
@@ -1408,7 +1316,7 @@
 </footer>
 
 <!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/5511999999999?text=Olá,%20Renata!%20Gostaria%20de%20saber%20mais%20sobre%20as%20sessões." class="float-wa" target="_blank" rel="noopener" title="WhatsApp">
+<a href="https://wa.me/5511985329959?text=Olá,%20Renata!%20Gostaria%20de%20mais%20informações%20sobre%20as%20sessões." class="float-wa" target="_blank" rel="noopener" title="WhatsApp">
 <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.374 0 0 5.373 0 12c0 2.138.558 4.144 1.535 5.887L.057 23.492a.5.5 0 00.604.64l5.857-1.479A11.944 11.944 0 0012 24c6.626 0 12-5.373 12-12S18.626 0 12 0zm0 22a9.954 9.954 0 01-5.03-1.357l-.36-.214-3.742.945.983-3.618-.235-.372A9.964 9.964 0 012 12C2 6.478 6.477 2 12 2s10 4.478 10 10-4.477 10-10 10z"/></svg>
 </a>
 
